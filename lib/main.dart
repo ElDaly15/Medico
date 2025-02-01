@@ -1,7 +1,9 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:medico/featuers/on_boarding/presentation/views/on_boarding_view.dart';
 
 void main() {
-  runApp(const MedicoApp());
+  runApp(DevicePreview(enabled: true, builder: (context) => const MedicoApp()));
 }
 
 class MedicoApp extends StatelessWidget {
@@ -9,16 +11,11 @@ class MedicoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'Hello World!',
-            style: TextStyle(fontFamily: 'Inter'),
-          ),
-        ),
-      ),
+      home: const OnBoardingView(),
     );
   }
 }
