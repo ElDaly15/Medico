@@ -26,13 +26,25 @@ class Assets {
   /// assets/images/Doctor5.png
   static const String imagesDoctor5 = "assets/images/Doctor5.png";
 
+  /// Assets for imagesErasedLogo
+  /// assets/images/erased_logo.png
+  static const String imagesErasedLogo = "assets/images/erased_logo.png";
+
   /// Assets for imagesGroup
   /// assets/images/group.svg
   static const String imagesGroup = "assets/images/group.svg";
 
+  /// Assets for imagesIcLauncher
+  /// assets/images/ic_launcher.png
+  static const String imagesIcLauncher = "assets/images/ic_launcher.png";
+
   /// Assets for imagesInvest
   /// assets/images/invest.svg
   static const String imagesInvest = "assets/images/invest.svg";
+
+  /// Assets for imagesMedicoLogo
+  /// assets/images/medico_logo.png
+  static const String imagesMedicoLogo = "assets/images/medico_logo.png";
 
   /// Assets for imagesMen
   /// assets/images/men.jpg

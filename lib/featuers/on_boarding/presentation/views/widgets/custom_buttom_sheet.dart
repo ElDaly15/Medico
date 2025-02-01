@@ -42,7 +42,7 @@ class _CustomButtomSheetState extends State<CustomButtomSheet> {
           ColumnOfOnBoardingContainer(
             title: 'Easier Medical Consultation',
             subTitle:
-                'Book a medical appointment, communicate with the doctor via the letter,Arrange a consultation ',
+                'Book a medical appointment, communicate with the doctor via the letter, a consultation Appointment.',
             pageController: pageController,
           ),
         ],
