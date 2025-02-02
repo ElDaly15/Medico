@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medico/core/utils/app_images.dart';
 import 'package:medico/core/utils/app_styles.dart';
+import 'package:medico/featuers/home/data/model/doctor_model.dart';
 
 class ContainerOfFavDoc extends StatelessWidget {
-  const ContainerOfFavDoc({super.key});
-
+  const ContainerOfFavDoc({super.key, required this.doctorModel});
+  final DoctorModel doctorModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +20,9 @@ class ContainerOfFavDoc extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-            child: Image.asset(Assets.imagesDoctor5),
+            child: Image.asset(
+              doctorModel.image,
+            ),
           ),
           const SizedBox(
             height: 5,
@@ -28,21 +31,23 @@ class ContainerOfFavDoc extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
               children: [
-                Text('Dr. Esther', style: TextStyles.font18SemiBold(context)),
+                Text(doctorModel.name,
+                    style: TextStyles.font18SemiBold(context)),
                 const Spacer(),
                 const Icon(
                   Icons.star,
                   color: Colors.yellow,
                   size: 20,
                 ),
-                Text('4.8', style: TextStyles.font14SemiBold(context)),
+                Text(doctorModel.rate,
+                    style: TextStyles.font14SemiBold(context)),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Text(
-              'Dentist',
+              doctorModel.specialty,
               style:
                   TextStyles.font18Medium(context).copyWith(color: Colors.grey),
             ),
