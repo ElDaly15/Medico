@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medico/core/utils/app_colors.dart';
 import 'package:medico/featuers/home/presentation/views/widgets/column_of_main_container_on_home.dart';
+import 'package:medico/featuers/home/presentation/views/widgets/container_of_top_doctor.dart';
 import 'package:medico/featuers/home/presentation/views/widgets/custom_header_with_title_and_see_all.dart';
 import 'package:medico/featuers/home/presentation/views/widgets/list_view_of_category_items.dart';
 import 'package:medico/featuers/home/presentation/views/widgets/row_of_fav_doc.dart';
@@ -35,6 +36,19 @@ class HomeViewBody extends StatelessWidget {
             height: 15,
           ),
           const RowOfFavDoc(),
+          const SizedBox(
+            height: 15,
+          ),
+          const CustomHeaderWithTitleAndSeeAll(
+            title: 'Top Doctor',
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const ContainerOfTopDoctor(),
+          const SizedBox(
+            height: 30,
+          ),
         ],
       ),
     );

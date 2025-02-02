@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medico/core/utils/app_images.dart';
 import 'package:medico/core/utils/app_styles.dart';
 import 'package:medico/featuers/home/data/model/doctor_model.dart';
 
