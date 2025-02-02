@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medico/core/utils/app_colors.dart';
 import 'package:medico/core/utils/app_styles.dart';
+import 'package:medico/featuers/home/presentation/views/home_view.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:get/get.dart' as g;
 
 class ColumnOfOnBoardingContainer extends StatefulWidget {
   const ColumnOfOnBoardingContainer(
@@ -80,10 +82,14 @@ class _ColumnOfOnBoardingContainerState
               ),
             ),
             onPressed: () {
-              widget.pageController.nextPage(
-                duration: const Duration(milliseconds: 500),
-                curve: Curves.easeInOut,
-              );
+              index == 2
+                  ? g.Get.off(() => const HomeView(),
+                      transition: g.Transition.fade,
+                      duration: const Duration(milliseconds: 600))
+                  : widget.pageController.nextPage(
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeInOut,
+                    );
             },
             child: Text(
               index == 2 ? 'Get Started' : 'Next',
