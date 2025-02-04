@@ -9,7 +9,10 @@ class HeaderOfAppointment extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          padding: const EdgeInsets.all(0),
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(
             Icons.arrow_back_ios_new_outlined,
             color: Colors.black,

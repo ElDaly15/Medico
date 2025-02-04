@@ -18,7 +18,15 @@ class ContainerOfFavDoc extends StatelessWidget {
       child: Container(
         width: MediaQuery.sizeOf(context).width * 0.41,
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 252, 251, 251),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.1),
+              spreadRadius: 2,
+              blurRadius: 12,
+              offset: const Offset(0, 1),
+            ),
+          ],
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
